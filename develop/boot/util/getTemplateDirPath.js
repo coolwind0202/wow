@@ -3,9 +3,11 @@
   - https://nodejs.org/api/path.html#pathresolvepaths
 */
 
+import { resolve } from "path";
+
 const getTemplateDirPath = () => {
-  return require("path").resolve(__dirname, "../cli/template");
+  return resolve(__dirname, "../cli/template");
 };
 // console.log(getTemplateDirPath());
 
-module.exports = getTemplateDirPath;
+export default getTemplateDirPath;

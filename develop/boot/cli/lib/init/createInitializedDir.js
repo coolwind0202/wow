@@ -1,7 +1,7 @@
-const path = require("path");
+import path from "path";
 
-const copySourceDir = require("../../../util/copySourceDir");
-const getTemplateDirPath = require("../../../util/getTemplateDirPath");
+import copySourceDir from "../../../util/copySourceDir";
+import getTemplateDirPath from "../../../util/getTemplateDirPath";
 
 const createInitializedDir = (distDir, options) => {
   const isTemplateProvided = options?.template != undefined;
@@ -11,4 +11,4 @@ const createInitializedDir = (distDir, options) => {
   copySourceDir(templateDir, distDir);
 };
 
-module.exports = createInitializedDir;
+export default createInitializedDir;

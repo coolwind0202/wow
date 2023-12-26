@@ -1,3 +1,8 @@
+/*
+  FIXME: This file is written in CommonJS format.
+  But we will use ESModules in our project.
+*/
+
 const path = require("path");
 
 const createInitializedDir = require("./createInitializedDir");

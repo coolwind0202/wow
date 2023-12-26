@@ -3,9 +3,8 @@
   - https://github.com/jprichardson/node-fs-extra/tree/master/docs
 */
 
-const { statSync, copySync, cp } = require("fs-extra");
-
-const { PathNotExistsError, PathIsDirError } = require("./pathAccessErrors");
+import { statSync, copySync } from "fs-extra";
+import { PathNotExistsError, PathIsDirError } from "./pathAccessErrors";
 
 function copySourceDir(srcDir, destDir) {
   const srcStat = statSync(srcDir, { throwIfNoEntry: false });
@@ -20,4 +19,4 @@ function copySourceDir(srcDir, destDir) {
   copySync(srcDir, destDir);
 }
 
-module.exports = copySourceDir;
+export default copySourceDir;

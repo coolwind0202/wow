@@ -1,4 +1,9 @@
 /*
+  FIXME: This file is written in CommonJS format.
+  But we will use ESModules in our project.
+*/
+
+/*
   Implemented with reference to:
   - https://jestjs.io/ja/docs/mock-functions
   - https://jestjs.io/ja/docs/expect#tocontainitem

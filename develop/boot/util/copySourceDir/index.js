@@ -1,1 +1,1 @@
-module.exports = require("./copySourceDir");
+export { default } from "./copySourceDir";

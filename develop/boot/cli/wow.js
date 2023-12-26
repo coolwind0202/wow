@@ -6,9 +6,9 @@
   - https://nodejs.org/api/process.html#processcwd
 */
 
-const path = require("path");
-const createInitializedDir = require('./lib/init/createInitializedDir');
-const getTemplateDirPath = require("../util/getTemplateDirPath");
+import path from "path";
+import createInitializedDir from "./lib/init/createInitializedDir";
+import getTemplateDirPath from "../util/getTemplateDirPath";
 
 require('yargs')
   .scriptName("wow")

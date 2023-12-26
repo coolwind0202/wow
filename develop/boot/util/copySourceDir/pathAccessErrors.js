@@ -17,7 +17,7 @@ class PathNotExistsError extends Error {
   }
 }
 
-module.exports = {
+export {
   PathIsDirError,
   PathNotExistsError
 };
