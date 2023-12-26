@@ -1,14 +1,10 @@
-/*
-  Implemented with reference to:
-  - https://nodejs.org/api/path.html#pathresolvepaths
-*/
-
 const path = require("path");
 
 const createInitializedDir = require("./createInitializedDir");
-const copySourceDir = require("../util/copySourceDir");
+const copySourceDir = require("../../../util/copySourceDir");
+const getTemplateDirPath = require("../../../util/getTemplateDirPath");
 
-jest.mock("../util/copySourceDir");
+jest.mock("../../../util/copySourceDir");
 beforeEach(() => {
   copySourceDir.mockReset();
 });
@@ -21,7 +17,7 @@ describe("Not specified template directory", () => {
     expect(calls.length).toBe(1);
 
     // src
-    expect(calls[0][0]).toBe(path.resolve(__dirname, "../../template"));
+    expect(calls[0][0]).toBe(getTemplateDirPath());
 
     // dist
     expect(calls[0][1]).toBe(dist);

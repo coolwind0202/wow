@@ -8,6 +8,7 @@
 
 const path = require("path");
 const createInitializedDir = require('./lib/init/createInitializedDir');
+const getTemplateDirPath = require("../util/getTemplateDirPath");
 
 require('yargs')
   .scriptName("wow")
@@ -24,7 +25,7 @@ require('yargs')
     if (argv.template != undefined) {
       console.log(`Template specified: ${argv.template}`);
     } else {
-      console.log(`Use default template: ${path.resolve(__dirname, "./template")}`);
+      console.log(`Use default template: ${getTemplateDirPath()}`);
     }
 
     createInitializedDir(process.cwd(), {
