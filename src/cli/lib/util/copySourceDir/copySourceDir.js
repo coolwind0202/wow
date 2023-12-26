@@ -1,7 +1,13 @@
+/*
+  Implemented with reference to:
+  - https://github.com/jprichardson/node-fs-extra/tree/master/docs
+*/
+
 const { statSync, copySync, cp } = require("fs-extra");
+
 const { PathNotExistsError, PathIsDirError } = require("./pathAccessErrors");
 
-function syncDelivered(srcDir = "local", destDir = "delivered") {
+function copySourceDir(srcDir, destDir) {
   const srcStat = statSync(srcDir, { throwIfNoEntry: false });
   if (srcStat == undefined) {
     throw new PathNotExistsError(`source directory '${srcDir}' does not exist.`);
@@ -14,4 +20,4 @@ function syncDelivered(srcDir = "local", destDir = "delivered") {
   copySync(srcDir, destDir);
 }
 
-module.exports = syncDelivered;
+module.exports = copySourceDir;
