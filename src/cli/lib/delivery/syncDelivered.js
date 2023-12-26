@@ -14,4 +14,4 @@ function syncDelivered(srcDir = "local", destDir = "delivered") {
   copySync(srcDir, destDir);
 }
 
-module.exports = syncDelivered
+module.exports = syncDelivered;

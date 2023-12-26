@@ -22,8 +22,8 @@ describe("When the local is a not directory but file", () => {
     fsExtra.statSync.mockReturnValue({
       isDirectory: () => false
     });
-    expect(syncDelivered).toThrow(PathIsDirError)
-  })
+    expect(syncDelivered).toThrow(PathIsDirError);
+  });
 });
 
 /* テスト対象フォルダが存在する場合のテスト */
