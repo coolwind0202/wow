@@ -1,1 +1,1 @@
-export { default } from "./copySourceDir";
+export { default } from "./copySourceDir.js";

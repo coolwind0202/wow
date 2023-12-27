@@ -7,10 +7,11 @@
 */
 
 import path from "path";
-import createInitializedDir from "./lib/init/createInitializedDir";
-import getTemplateDirPath from "../util/getTemplateDirPath";
+import createInitializedDir from "./lib/init/createInitializedDir.js";
+import getTemplateDirPath from "../util/getTemplateDirPath.js";
+import yargs from "yargs/yargs";
 
-require('yargs')
+yargs(process.argv.slice(2))
   .scriptName("wow")
   .usage('$0 <cmd> [args]')
   .command('init [template]', 'Initialize current dircetory.', {

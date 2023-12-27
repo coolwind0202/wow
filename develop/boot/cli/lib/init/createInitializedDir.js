@@ -1,7 +1,7 @@
 import path from "path";
 
-import copySourceDir from "../../../util/copySourceDir";
-import getTemplateDirPath from "../../../util/getTemplateDirPath";
+import copySourceDir from "../../../util/copySourceDir/index.js";
+import getTemplateDirPath from "../../../util/getTemplateDirPath.js";
 
 const createInitializedDir = (distDir, options) => {
   const isTemplateProvided = options?.template != undefined;

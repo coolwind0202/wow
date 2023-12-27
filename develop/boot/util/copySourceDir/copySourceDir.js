@@ -3,8 +3,9 @@
   - https://github.com/jprichardson/node-fs-extra/tree/master/docs
 */
 
-import { statSync, copySync } from "fs-extra";
-import { PathNotExistsError, PathIsDirError } from "./pathAccessErrors";
+import { statSync } from "fs";
+import { copySync } from "fs-extra/esm";
+import { PathNotExistsError, PathIsDirError } from "./pathAccessErrors.js";
 
 function copySourceDir(srcDir, destDir) {
   const srcStat = statSync(srcDir, { throwIfNoEntry: false });

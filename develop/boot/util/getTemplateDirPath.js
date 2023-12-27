@@ -4,6 +4,7 @@
 */
 
 import { resolve } from "path";
+import __dirname from "./dirname.js";
 
 const getTemplateDirPath = () => {
   return resolve(__dirname, "../cli/template");
