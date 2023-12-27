@@ -13,7 +13,9 @@
   "dependencies": {
     "express": "^4.18.2",
     "fs-extra": "^11.2.0",
-    "yargs": "^17.7.2"
+    "yargs": "^17.7.2",
+    "file_util": "workspace:../file_util",
+    "server": "workspace:../server"
   },
   "devDependencies": {
     "@types/jest": "^29.5.11",

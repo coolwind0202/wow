@@ -8,7 +8,7 @@
 
 import path from "path";
 import createInitializedDir from "./lib/init/createInitializedDir.js";
-import getTemplateDirPath from "../util/getTemplateDirPath.js";
+import getTemplateDirPath from "./lib/getTemplateDirPath.js";
 import yargs from "yargs/yargs";
 
 yargs(process.argv.slice(2))
