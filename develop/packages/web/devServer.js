@@ -1,4 +1,5 @@
-import { app } from "server/server";
+import { app } from "server/server.js";
+import { createServer as createViteServer } from "vite";
 
 async function createServer() {
   // ミドルウェアモードで Vite サーバーを作成
